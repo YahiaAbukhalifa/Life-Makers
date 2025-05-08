@@ -1,0 +1,111 @@
+/* Styles for nested navigation menu */
+
+/* Base styles for nested menu */
+.nested-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 10px 0;
+    min-width: 200px;
+    right: 0;
+    text-align: right;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.nested-menu a {
+    padding: 10px 15px;
+    color: #000 !important;
+    font-size: 16px !important;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nested-menu a:hover {
+    background-color: rgba(1, 72, 116, 0.1);
+    color: var(--secondary-color-2) !important;
+}
+
+/* Position the parent menu items */
+.mainLinks a {
+    position: relative;
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .mainLinks a:hover .nested-menu {
+        display: flex;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nested-menu {
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        right: auto;
+        padding-right: 24px;
+    }
+    
+    .nested-menu a {
+        color: #fff !important;
+        font-size: 18px !important;
+        padding: 10px 0 10px 0;
+        text-align: center;
+        width: 100%;
+        text-indent: -12px;
+    }
+    
+    .nested-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--secondary-color-2) !important;
+    }
+    
+    /* Add animation for mobile nested menu */
+    .nested-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .nested-menu.active {
+        max-height: 500px;
+    }
+    
+    /* Arrow for mobile nested menu */
+    .nested-menu.mobile-arrow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 18px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 8px solid #fff;
+        z-index: 1001;
+    }
+}
+
+/* Arrow at top right of nested-menu */
+.nested-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px; /* Adjust this to move the arrow left/right */
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #fff; /* Same as .nested-menu background */
+    z-index: 1001;
+}

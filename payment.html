@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صناع الحياة دمياط | طرق الدفع</title>
+    <meta name="description" content="طرق الدفع المتاحة للتبرع لصناع الحياة دمياط" />
+    <meta name="author" content="Life Makers Damietta" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="./css/homePage.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/reloading.css" />
+    <link rel="stylesheet" href="./css/nested-nav.css" />
+    <link rel="stylesheet" href="./css/mobile-nested-nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Amiko:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&display=swap"
+    rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #2e86de;
+            --secondary-color: #2c3e50;
+            --accent-color: #ff9f43;
+            --light-bg: #f5f7fa;
+            --border-radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        .payment-container {
+            max-width: 800px;
+            margin: 70px auto;
+            padding: 30px 20px;
+            direction: rtl;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2.2em;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .payment-methods {
+            background: #fff;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .payment-method {
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: var(--transition);
+            border-right: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .payment-method:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .payment-method:last-child {
+            margin-bottom: 0;
+        }
+
+        .payment-method-details {
+            flex: 1;
+        }
+
+        .payment-method h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-method h3 i {
+            margin-left: 10px;
+            color: var(--accent-color);
+        }
+
+        .payment-method p {
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin: 5px 0;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .payment-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-left: 20px;
+            opacity: 0.8;
+        }
+
+        .caution-message {
+            background: #fff;
+            border-right: 5px solid #ff6b6b;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .caution-message h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caution-message h3 i {
+            margin-left: 10px;
+        }
+
+        .caution-message p {
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .phone-number {
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #e74c3c;
+            background: #ffe9e9;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 10px;
+            direction: ltr;
+        }
+
+        .phone-number i {
+            margin-right: 8px;
+        }
+
+        .copy-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.9em;
+        }
+
+        .copy-btn:hover {
+            background-color: #1c6bc9;
+        }
+
+        .success-message {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2ecc71;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .show-message {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .payment-container {
+                margin: 50px auto;
+                padding: 20px 15px;
+            }
+
+            .payment-methods {
+                padding: 25px 20px;
+            }
+
+            .payment-method {
+                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+                border-right: none;
+                border-top: 5px solid var(--primary-color);
+            }
+
+            .payment-icon {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+
+            .page-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payment-container">
+        <h1 class="page-title">طرق الدفع المتاحة</h1>
+
+        <div class="caution-message">
+            <h3><i class="fas fa-exclamation-triangle"></i> تنبيه هام</h3>
+            <p>يرجى إرسال صورة إيصال الدفع على الرقم التالي بعد إتمام عملية التحويل:</p>
+            <p class="phone-number"><i class="fas fa-phone"></i>01003048174 <button class="copy-btn"
+                    onclick="copyToClipboard('01003048174')">نسخ</button></p>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-method">
+                <div class="payment-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="payment-method-details">
+                    <h3><i class="fas fa-wallet"></i> فودافون كاش</h3>
+                    <p>01012508515 <button class="copy-btn" onclick="copyToClipboard('01012508515')">نسخ</button></p>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <div class="payment-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="payment-method-details">
+                    <h3><i class="fas fa-landmark"></i> حساب بنكي - بنك القاهرة</h3>
+                    <p>04405010031961 <button class="copy-btn" onclick="copyToClipboard('04405010031961')">نسخ</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">تم النسخ بنجاح!</div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.classList.add('show-message');
+
+                setTimeout(function () {
+                    successMessage.classList.remove('show-message');
+                }, 2000);
+            }, function () {
+                alert('فشل نسخ النص');
+            });
+        }
+    </script>
+</body>
+
+</html>

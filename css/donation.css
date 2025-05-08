@@ -1,0 +1,489 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #316B89;
+  --accent-color: #FF9D00;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-color: #e0e0e0;
+  --success-color: #4caf50;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.donation-filter-section {
+  padding: 2rem;
+  text-align: center;
+  direction: rtl;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #1e88e5;
+  background-color: white;
+  color: #1e88e5;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.donation-cards-section {
+  padding: 2rem;
+  direction: rtl;
+}
+
+.donation-cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.donation-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.donation-card {
+    flex: 0 1 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 280px;
+    max-width: 400px;
+    direction: rtl;
+    text-align: right;
+}
+
+.donation-card-header {
+    height: 180px;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.donation-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.donation-share-icon {
+    position: relative;
+    z-index: 1;
+}
+
+.donation-share-icon {
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    float: left;
+}
+
+.donation-card-content {
+    padding: 20px;
+}
+
+.donation-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.donation-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.donation-location, .donation-beneficiaries {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.donation-progress {
+    margin-bottom: 20px;
+}
+
+.donation-progress-text {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.donation-amount {
+    color: var(--secondary-color);
+}
+
+.donation-target, .donation-currency {
+    color: #666;
+}
+
+.donation-progress-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.donation-progress-fill {
+    height: 100%;
+    background-color: var(--secondary-color-gradiant);
+    border-radius: 5px;
+}
+
+.donation-percentage {
+    text-align: left;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.donation-quantity {
+    margin-bottom: 20px;
+}
+
+.donation-quantity h4 {
+    text-align: right;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.donation-amount-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.custom-amount-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 18px;
+    padding-right: 10px;
+    padding-left: 50px;
+}
+
+.donation-currency {
+    position: absolute;
+    left: 10px;
+    color: var(--secondary-color-gradiant);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.donation-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donation-details {
+    flex: 1;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.donation-now, .submit-data {
+    flex: 1;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color-gradiant);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#donorAmount, #donorIntention{
+  text-align: right;
+}
+
+.submit-data{
+  padding: 20px 0 20px 0;
+}
+
+.donation-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.donation-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    direction: rtl;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.donation-popup.show .popup-content {
+    transform: translateY(0);
+}
+
+.close-popup {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.popup-content h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.popup-content label {
+  color: #666;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="tel"] {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .donation-filter-section,
+  .donation-cards-section {
+    padding: 1rem;
+  }
+
+  .donation-cards-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .donation-card {
+    flex: 0 0 280px;
+    margin: 0;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  #donationForm{
+    height: 300px;
+    overflow: auto;
+  }
+  .donation-filter-section{
+    margin-top: 4rem;
+  }
+}
+/* Donation Popup Styles */
+.donation-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  direction: rtl;
+}
+
+.donation-popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.close-popup:hover {
+  color: #333;
+}
+
+.popup-content h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#donationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#donationForm label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+#donationForm input[type="text"],
+#donationForm input[type="tel"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+
+#donationForm input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(49, 107, 137, 0.2);
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.radio-group label {
+  flex: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 0.3rem;
+  margin-left: 1rem;
+}
+
+#locationField {
+  transition: all 0.3s ease;
+}
+
+#locationField.hidden {
+  display: none;
+}
+
+.submit-data {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-data:hover {
+  background-color: #ff5239;
+}

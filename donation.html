@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صناع الحياة دمياط | فرص التبرع</title>
+  <meta name="description" content="صفحة التبرع لصناع الحياة دمياط، اختر نوع التبرع المناسب لك وادعم الحالات المختلفة." />
+  <meta name="author" content="Life Makers Damietta" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="صناع الحياة دمياط | فرص التبرع" />
+  <meta property="og:description" content="صفحة التبرع لصناع الحياة دمياط، اختر نوع التبرع المناسب لك وادعم الحالات المختلفة." />
+  <meta property="og:image" content="./images/logo.webp" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./css/homePage.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="stylesheet" href="./css/donation.css" />
+  <link rel="stylesheet" href="./css/reloading.css" />
+  <link rel="stylesheet" href="./css/nested-nav.css" />
+  <link rel="stylesheet" href="./css/mobile-nested-nav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Amiko:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+  <script src="./js/nested-nav.js"></script>
+
+  <nav>
+    <img src="./images/logo -ramadan.jpg" alt="Life Makers Damietta" class="logo" id="logo" />
+    <img src="./images/logo.webp" alt="Life Makers Damietta" class="logo2" id="logo2" />
+    <div class="quickContact">
+      <div class="socialMediaProfiles">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+      <div class="contactInfo">
+        <p>01003048174 <a href="tel:+201003048174"><i class="fa-solid fa-phone"></i></a></p>
+        <p>Town-Team شارع الجلاء- عمارة <a href="https://maps.app.goo.gl/u7fPp4zjQ9ZBjmTK7" target="_blank"><i class="fa-solid fa-location-dot"></i></a></p>
+        <p>lifemakers.dameitta@gmail.com <a href="mailto:lifemakers.dameitta@gmail.com"><i class="fa-solid fa-envelope"></i></a></p>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <p><a href="./donation.html" class="active">تبرع الأن</a></p>
+    <div class="mainLinks">
+      <a href="./activites.html">الأنشطة</a>
+      <a href="./campaigns.html">الحملات</a>
+      <a href="./volunteer.html">التطوع<i class="fa-solid fa-caret-down"></i></a>
+      <a href="./donation.html" class="active">فرص التبرع</a>
+      <a href="./about.html">عن صناع <i class="fa-solid fa-caret-down"></i></a>
+      <a href="./index.html">الرئيسية</a>
+    </div>
+    <div class="mobile-menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <div class="mobile-menu-overlay"></div>
+  <section class="donation-filter-section">
+    <div class="filter-container">
+      <button class="filter-btn" data-category="family">أسرة</button>
+      <button class="filter-btn" data-category="campaigns">بنود</button>
+    </div>
+  </section>
+  <section class="donation-cards-section">
+    <div class="donation-cards-container" id="donationCardsContainer">
+      <!-- Cards will be rendered by JS -->
+    </div>
+    <div class="donation-slider-controls">
+      <div class="donation-slider-dots"></div>
+      <button class="donation-slider-prev">&#10094;</button>
+      <button class="donation-slider-next">&#10095;</button>
+    </div>
+  </section>
+  <div id="donation-popup" class="donation-popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <h3>بيانات التبرع</h3>
+      <form id="donationForm">
+        <label for="donorName">الاسم:</label>
+        <input type="text" id="donorName" name="donorName" required />
+        <label for="donorPhone">رقم الهاتف:</label>
+        <input type="tel" id="donorPhone" name="donorPhone" required />
+        <label for="donorAmount">مبلغ التبرع:</label>
+        <input type="tel" id="donorAmount" name="donorAmount" required />
+        <label for="donorIntention">نية التبرع:</label>
+        <input type="text" id="donorIntention" name="donorIntention" required />
+        <div class="radio-group">
+          <label>هل تريد ان يصل اليك مندوب ليأخذ التبرع؟</label>
+          <input type="radio" name="needDelegate" value="yes" id="needDelegateYes" /> نعم
+          <input type="radio" name="needDelegate" value="no" id="needDelegateNo" checked /> لا
+        </div>
+        <div id="locationField" class="hidden">
+          <label for="donorLocation">العنوان:</label>
+          <input type="text" id="donorLocation" name="donorLocation" />
+        </div>
+        <button type="submit" id="submit-donation-btn" class="submit-data">إرسال</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <img src="./images/footerLogo.webp" alt="Life Makers Damietta" class="footer-logo">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-phone"></i>01003048174</p>
+          <p><i class="fa-solid fa-envelope"></i>lifemakers.dameitta@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot"></i>Town-Team شارع الجلاء- عمارة</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>روابط سريعة</h3>
+        <ul>
+          <li><a href="./index.html"><i class="fa-solid fa-chevron-left"></i>الرئيسية</a></li>
+          <li><a href="./about.html"><i class="fa-solid fa-chevron-left"></i>عن صناع</a></li>
+          <li><a href="./donation.html"><i class="fa-solid fa-chevron-left"></i>فرص التبرع</a></li>
+          <li><a href="./volunteer.html"><i class="fa-solid fa-chevron-left"></i>التطوع</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>التبرع</h3>
+        <ul>
+          <li><a href="./donation.html?category=family"><i class="fa-solid fa-chevron-left"></i>تبرع لأسرة</a></li>
+          <li><a href="./donation.html?category=campaigns"><i class="fa-solid fa-chevron-left"></i>تبرع لبنود</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>اشترك في النشرة البريدية</h3>
+        <p>اشترك في النشرة البريدية لصناع الحياة دمياط ليصلك كل جديد</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="بريدك الإلكتروني" required>
+          <button type="submit">اشترك</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>جميع الحقوق محفوظة © 2025 صناع الحياة دمياط</p>
+    </div>
+  </footer>
+  <script src="./js/donation.js"></script>
+  <script src="./js/donation-form.js"></script>
+  <script src="./js/mobileNav.js" defer></script>
+  <script src="./js/donation-slider.js" defer></script>
+  <script src="./js/homePage.js" defer></script>
+</body>
+</html>

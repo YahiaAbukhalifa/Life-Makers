@@ -1,0 +1,68 @@
+/* Styles for mobile nested navigation menu */
+
+/* Base styles for mobile nested menu */
+.mobile-nested-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(1, 72, 116, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 5px 0;
+    width: 100%;
+    text-align: right;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.mobile-nested-menu.active {
+    display: flex;
+    max-height: 500px;
+}
+
+.mobile-nested-menu a {
+    padding: 10px 20px;
+    color: #fff !important;
+    font-size: 16px !important;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.mobile-nested-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color-2) !important;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .mobile-nested-menu {
+        position: relative;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0;
+        right: auto;
+    }
+    
+    .mobile-nested-menu a {
+        color: #fff !important;
+        font-size: 16px !important;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .mobile-nested-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--secondary-color-2) !important;
+    }
+    
+    /* Add animation for mobile nested menu */
+    .mobile-nested-menu.active {
+        max-height: 500px;
+        padding: 5px 0;
+        margin: 5px 0;
+    }
+}

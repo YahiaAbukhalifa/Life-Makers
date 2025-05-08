@@ -1,0 +1,352 @@
+/* Responsive Styles for Life Makers Damietta Website */
+
+/* Base responsive settings */
+@media (max-width: 1200px) {
+
+  h2::before,
+  h2::after {
+    width: 80px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .campaigns-container {
+    max-width: 90%;
+  }
+
+}
+
+/* Tablet styles */
+@media (max-width: 995px) {
+
+  /* Header and navigation */
+  nav .quickContact {
+    padding: 10px 50px;
+  }
+
+  nav .contactInfo {
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav .contactInfo p {
+    font-size: 14px;
+  }
+
+  header .mainLinks {
+    gap: 15px;
+  }
+
+  header .mainLinks a {
+    font-size: 16px;
+  }
+
+  /* Hero section */
+  .hero-content {
+    width: 100%;
+  }
+
+  .main-text {
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+  }
+
+  /* Harvest section */
+  .stats-box {
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h2::before,
+  h2::after {
+    width: 10%;
+  }
+
+
+  .filter-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .campaign-card {
+    height: 300px;
+  }
+
+  /* Sponsors section */
+  .sponsersLogo {
+    gap: 1.5rem;
+  }
+
+  .sponsersLogo img {
+    height: 100px;
+  }
+
+  /* Mobile menu toggle button */
+  .mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .mobile-menu-toggle.active {
+    color: var(--secondary-color-2);
+  }
+  
+  footer{
+    border-radius: 0;
+  }
+  .logo, .logo2{
+    width: 120px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Logo size when scrolling */
+  .logo.scroll-active, .logo2.scroll-active {
+    width: 80px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-text{
+      width: 97%;
+      margin: 0 auto;
+    }
+    .logo.scroll-active, .logo2.scroll-active {
+      width: 65px;
+    }
+  }
+  .slider-section h2{
+    font-size: 22px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Donation Cards Mobile Slider */
+  .donation-cards-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+  }
+  
+  .donation-card {
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    left: 5%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .donation-slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .donation-slider-dots {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .donation-slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .donation-slider-dot.active {
+    background-color: var(--secondary-color-gradiant);
+  }
+  
+  .donation-slider-prev,
+  .donation-slider-next {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .donation-slider-prev:hover,
+  .donation-slider-next:hover {
+    background-color: var(--secondary-color-2);
+  }
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background: rgba(223,244,255,0.7);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+    height: 70px;
+  }
+  header.sticky {
+    background: var(--main-color);
+    box-shadow: 0 2px 16px rgba(49,107,137,0.12);
+    padding: 5px 10px;
+  }
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    left: 20px;
+    z-index: 1004;
+    cursor: pointer;
+    font-size: 28px;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu-toggle.active {
+    color: var(--secondary-color-2);
+  }
+  header .mainLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(49,107,137,0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 1002;
+    transition: transform 0.5s cubic-bezier(0.77,0,0.175,1), opacity 0.5s;
+    transform: translateX(-100vw);
+    opacity: 0;
+    box-shadow: none;
+    padding: 0;
+    overflow-y: auto;
+  }
+  header .mainLinks.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  header .mainLinks a {
+    font-size: 24px;
+    color: #fff;
+    padding: 18px 0;
+    width: 80vw;
+    text-align: center;
+    border-radius: 12px;
+    background: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
+  header .mainLinks a:hover,
+  header .mainLinks a:focus {
+    color: var(--secondary-color-2);
+    background: rgba(255,255,255,0.08);
+    transform: scale(1.05);
+  }
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .mobile-menu-overlay.active {
+    opacity: 1;
+  }
+  nav .quickContact {
+    display: none;
+  }
+  nav .contactInfo {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .contactInfo p {
+    margin: 4px 0;
+  }
+  nav .socialMediaProfiles {
+    width: 100%;
+    justify-content: center;
+  }
+  header p {
+    display: none;
+  }
+  .stats-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .hero{
+    height: 90vh;
+  }
+  .donate-button{
+    font-size: 14px;
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  section{
+    padding: 0;
+  }
+  .hero-slider-track{
+    width: 95%;
+  }
+  .timeline{
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header .mainLinks a {
+    font-size: 18px;
+    padding: 14px 0;
+  }
+  header p {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    padding-left: 0;
+  }
+  footer ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    position: relative;
+  }
+  footer ul li .chevron-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 20px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,129 @@
+.campaigns {
+    padding: 2rem;
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filter-btn.active {
+    background: #2196F3;
+    color: white;
+}
+
+.campaigns-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.campaign-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+}
+
+.campaign-content {
+    padding: 1.5rem;
+    background: white;
+}
+
+/* Campaign Icons */
+.campaign-card::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #2196F3;
+    z-index: 1;
+}
+
+.campaign-card[data-category="winter"]::before {
+    content: "\f2dc"; /* snowflake */
+    color: #00bcd4;
+}
+
+.campaign-card[data-category="ramadan"]::before {
+    content: "\f699"; /* moon */
+    color: #ffc107;
+}
+
+.campaign-card[data-category="adha"]::before {
+    content: "\f711"; /* sheep */
+    color: #8d6e63;
+}
+
+.campaign-card[data-category="9astr"]::before {
+    content: "\f02d"; /* book */
+    color: #4caf50;
+}
+
+.campaign-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.campaign-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.donate-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+    background: #1976D2;
+}
+
+@media (max-width: 768px) {
+    .campaigns {
+        padding: 1rem;
+    }
+    
+    .campaigns h2 {
+        font-size: 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .campaigns-container {
+        grid-template-columns: 1fr;
+    }
+}
